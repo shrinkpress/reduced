@@ -5,6 +5,9 @@
  *
  * @package WordPress
  */
+use ShrinkPress\Mail\SMTP as SMTP;
+use ShrinkPress\Mail\phpmailerException as phpmailerException;
+use ShrinkPress\Mail\PHPMailer as PHPMailer;
 
 if ( ! function_exists( 'wp_set_current_user' ) ) :
 	/**
@@ -211,8 +214,8 @@ if ( ! function_exists( 'wp_mail' ) ) :
 
 		// (Re)create it, if it's gone missing.
 		if ( ! ( $phpmailer instanceof PHPMailer ) ) {
-			require_once ABSPATH . WPINC . '/class-phpmailer.php';
-			require_once ABSPATH . WPINC . '/class-smtp.php';
+// SHRINKPRESS-WAS-HERE!
+// SHRINKPRESS-WAS-HERE!
 			$phpmailer = new PHPMailer( true );
 		}
 
@@ -2807,4 +2810,3 @@ if ( ! function_exists( 'wp_text_diff' ) ) :
 		return $r;
 	}
 endif;
-
