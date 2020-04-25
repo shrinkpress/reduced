@@ -14,6 +14,9 @@
  * @since 1.0.0
  */
 define( 'WPINC', 'wp-includes' );
+/** @see shrinkpress */
+require ABSPATH . '/shrinkpress-vendors/autoload.php';
+
 
 /**
  * Version information for the current WordPress release.
